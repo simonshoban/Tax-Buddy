@@ -1,0 +1,137 @@
+html {
+	height:100%;
+}
+body {
+	margin:auto;
+	text-align:center;
+	height:100%;
+}
+main {
+	display:flex;
+	flex:1;
+	flex-flow:column;
+	text-align:center;
+}
+header {
+	color:white;
+	background-color:LightSkyBlue;
+	padding:1px;
+}
+header h1 {
+	font-family:helvetica;
+	font-size:2em;	
+}
+#mid {
+	margin:20px 0;
+}
+#mid_partition {
+	width:100%;
+	display:flex;
+	flex:3;
+	flex-flow:row;
+}
+#mid_partition div {
+	width:100%;
+}
+#net_income {
+	text-align:center;
+	font-size:5em;
+	border:none;
+	width: 85%;
+}
+#lower, #bottom {
+	display:flex;
+	flex:3;
+	flex-flow:row;
+	width:100%;
+	margin:auto;
+}
+.lower_sections {
+	display: flex;
+	flex-flow: column;
+	width: 100%;
+}
+.lower_content {
+	display: flex;
+	flex-flow: row;
+}
+#bottom div {
+	text-align:center;
+	display:flex;
+	flex-flow:row;
+	width:100%;
+	min-width:160px;
+}
+.lower_content div, #stock_breakdown div {
+	display:flex;
+	flex-flow:column;
+	width: 100%;
+}
+#lower div input, #bottom div input {
+	text-align:center;
+	width:70%;
+}
+.lower_content div div, #bottom div div div {
+	height:40px;
+	margin-top:10px;
+	margin-bottom:10px;	
+}
+#form {
+	background-color:white;
+}
+.lower_content div div {
+	height:40px;
+	margin-top:10px;
+	margin-bottom:10px;
+}
+#federal_breakdown input, #provincial_breakdown input, #stock_breakdown input {
+	border:none;
+}
+
+#stock_labels label {
+	font-weight: bold;
+}
+
+.content_labels {
+	flex: 11;
+}
+
+.content_data {
+	flex: 7;
+}
+
+/* Less than or equal to 720 pixels wide */
+@media (max-width: 720px) {
+    header {
+        padding:30px 0;
+	}
+	
+    header h1 {
+        font-size:3.2em;
+        margin:0;
+	}
+
+	#mid {
+		margin: 15px 0;
+	}
+
+	#net_income {
+		font-size: 3.2em;
+	}
+
+	#lower {
+		flex-flow: column;
+	}
+
+	#lower #form {
+		order: 1;
+	}
+
+	#lower #federal_breakdown {
+		order: 2;
+	}
+
+	#lower #provincial_breakdown {
+		order: 3;
+	}
+}

@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8"/>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+		<title>Tax Buddy</title>
+		<link rel="stylesheet" href="styles/base.css"/>
+		<script src="scripts/angular.min.js"></script>
+		<script src="scripts/script.js"></script>
+	</head>
+	<body onload="appendScrollCancellationToInputs()">
+		<header id="upper">
+			<h1>Tax Buddy</h1>
+		</header>
+		<main id="main">
+			<div id="mid">
+				<input id="net_income" name="net_income" readonly="readonly" type="text" value="$0.00"/>
+			</div>
+			<div id="lower">
+				<div id="federal_breakdown" class="lower_sections">
+					<div class="lower_titles">
+						<h3>Federal Tax Breakdown</h3>
+					</div>
+					<div class="lower_content">
+						<div id="fed_labels" class="content_labels">
+							<div><label for="fed_bracket_1">$0 - $45,916</label></div>
+							<div><label for="fed_bracket_2">$45,916 - $91,813</label></div>
+							<div><label for="fed_bracket_3">$91,813 - $142,353</label></div>
+							<div><label for="fed_bracket_4">$142,353 - $202,800</label></div>
+							<div><label for="fed_bracket_5">$202,800+</label></div>
+						</div>
+						<div id="fed_data" class="content_data">
+							<div><input id="fed_bracket_1" name="fed_bracket_1" readonly="readonly" type="text" value="$0.00"/></div>
+							<div><input id="fed_bracket_2" name="fed_bracket_2" readonly="readonly" type="text" value="$0.00"/></div>
+							<div><input id="fed_bracket_3" name="fed_bracket_3" readonly="readonly" type="text" value="$0.00"/></div>
+							<div><input id="fed_bracket_4" name="fed_bracket_4" readonly="readonly" type="text" value="$0.00"/></div>
+							<div><input id="fed_bracket_5" name="fed_bracket_5" readonly="readonly" type="text" value="$0.00"/></div>
+						</div>					
+					</div>
+				</div>
+				<div id="form" class="lower_sections">
+					<div class="lower_titles">
+						<h3>Enter Data Here</h3>
+					</div>
+					<div class="lower_content">
+						<div id="employment_income_labels" class="content_labels">
+							<div><label for="income">Employment Income</label></div>
+							<div><label for="months_worked">Months Worked</label></div>
+						</div>
+						<div id="employment_income_inputs" class="content_data" onkeyup="update()">
+							<div><input id="income" name="income" type="text" onchange="update()"/></div>
+							<div><input id="months_worked" name="months" type="text" onchange="update()" value="12"/></div>
+						</div>
+						<div id="labels" class="content_labels">
+							<div><label for="deductions">Deductions</label></div>
+							<div><label for="capital_gains">Capital Gains</label></div>
+							<div><label for="dividends">Dividends</label></div>						
+						</div>
+						<div id="inputs"  class="content_data"onkeyup="update()">
+							<div><input id="deductions" name="deductions" type="text" onchange="update()"/></div>
+							<div><input id="capital_gains" name="capital_gains" type="text" onchange="update()"/></div>
+							<div><input id="dividends" name="dividends" type="text" onchange="update()"/></div>						
+						</div>
+					</div>		
+				</div>
+				<div id="provincial_breakdown" class="lower_sections">
+					<div class="lower_titles">
+						<h3>Provincial Tax Breakdown</h3>
+					</div>
+					<div class="lower_content">
+						<div id="prov_labels" class="content_labels">
+							<div><label for="prov_bracket_1">$0 - $38,898</label></div>
+							<div><label for="prov_bracket_2">$38,898 - $77,797</label></div>
+							<div><label for="prov_bracket_3">$77,797 - $89,320</label></div>
+							<div><label for="prov_bracket_4">$89,320 - $108,460</label></div>
+							<div><label for="prov_bracket_5">$108,460+</label></div>
+						</div>
+						<div id="prov_data" class="content_data">
+							<div><input id="prov_bracket_1" name="prov_bracket_1" readonly="readonly" type="text" value="$0.00"/></div>
+							<div><input id="prov_bracket_2" name="prov_bracket_2" readonly="readonly" type="text" value="$0.00"/></div>
+							<div><input id="prov_bracket_3" name="prov_bracket_3" readonly="readonly" type="text" value="$0.00"/></div>
+							<div><input id="prov_bracket_4" name="prov_bracket_4" readonly="readonly" type="text" value="$0.00"/></div>
+							<div><input id="prov_bracket_5" name="prov_bracket_5" readonly="readonly" type="text" value="$0.00"/></div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div id="bottom">
+				<div id="stock_breakdown">
+					<div id="stock_labels" class="content_labels">
+						<div><label for="cap_gains_tax">Capital Gains Tax</label></div>
+						<div><label for="dividends_tax">Dividends Tax</label></div>
+					</div>
+					<div id="stock_data" class="content_data">
+						<div><input id="cap_gains_tax" name="cap_gains_tax" readonly="readonly" type="text" value="$0.00"/></div>
+						<div><input id="dividends_tax" name="dividends_tax" readonly="readonly" type="text" value="$0.00"/></div>
+					</div>
+				</div>
+			</div>
+		</main>
+	</body>
+</html>
