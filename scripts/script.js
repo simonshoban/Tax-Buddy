@@ -47,7 +47,7 @@ function $(id) {
 function update() {
 	taxed = 0;
 	employmentIncome = $("income").value;
-	monthsWorked = $("months").value;
+	monthsWorked = $("months_worked").value;
 	deductions = $("deductions").value;
 	capGains = $("capital_gains").value;
 	dividends = $("dividends").value;
