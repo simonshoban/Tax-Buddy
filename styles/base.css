@@ -61,14 +61,17 @@ header h1 {
 	flex-flow:row;
 	width:100%;
 	min-width:160px;
+	max-width:1000px;
+	margin:auto;
 }
 .lower_content div, #stock_breakdown div {
 	display:flex;
 	flex-flow:column;
 	width: 100%;
+	flex:2;
 }
 #lower div input, #bottom div input {
-	text-align:center;
+	text-align:right;
 	width:70%;
 }
 .lower_content div div, #bottom div div div {
